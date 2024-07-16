@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: NOTES
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: none
+  messages:
+    encoding: UTF-8
+    basename: messages
+
+
+
+token:
+  expiration-time:
+    duration: 7   # 24 unit (hours, days, months, years)
+    unit: DAYS    # One of ChronosUnit ENUMS (HOURS, DAYS, SECONDS etc.)
+  refresh-expiration-time:
+    duration: 30
+    unit: DAYS
+
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /custom-actuator
+  endpoint:
+    health:
+      show-details: always
+      enabled: true

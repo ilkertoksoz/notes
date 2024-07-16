@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notebook
+    username: postgres
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: debug
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql.BasicBinder: ERROR
+    org.hibernate.type.descriptor.sql.BasicExtractor: ERROR
+    org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: ERROR
+    org.hibernate.loader.entity.plan: ERROR
+    org.hibernate.orm.sql.ast.tree: ERROR
