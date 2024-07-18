@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-public class BaseDateAuditDTO extends BaseDTO {
+public class BaseDateAuditDTO extends BaseDataStatusDTO {
 
     protected Date createdAt;
     protected Date updatedAt;

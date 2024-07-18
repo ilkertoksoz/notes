@@ -10,6 +10,8 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+  main:
+    allow-circular-references: true
 
 server:
   port: 8080
@@ -19,19 +21,19 @@ logging:
     root: debug
     org:
       hibernate:
-        SQL: ERROR
+        SQL: error
         type:
           descriptor:
             sql:
-              BasicBinder: ERROR
-              BasicExtractor: ERROR
+              BasicBinder: error
+              BasicExtractor: error
         engine:
           internal:
-            StatisticalLoggingSessionEventListener: ERROR
+            StatisticalLoggingSessionEventListener: error
         loader:
           entity:
-            plan: ERROR
+            plan: error
         orm:
           sql:
             ast:
-              tree: ERROR
+              tree: error

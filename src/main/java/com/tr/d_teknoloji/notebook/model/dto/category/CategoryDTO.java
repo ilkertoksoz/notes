@@ -23,7 +23,6 @@ public class CategoryDTO extends BaseDateAuditDTO {
         return super.getId();
     }
 
-    @NotBlank(message = "Category name is required")
     @Schema(description = "Category Name", example = "Work")
     private String name;
 

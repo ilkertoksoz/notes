@@ -7,7 +7,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: 'true'
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
   messages:
     encoding: UTF-8
     basename: messages

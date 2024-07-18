@@ -22,7 +22,7 @@ import java.util.Objects;
 @JsonIgnoreProperties(
         value = {"createdBy", "updatedBy"},
         allowGetters = true)
-public abstract class UserDateStatusAudit extends DateAudit {
+public abstract class UserDateStatusAudit extends DateStatusAudit {
 
     @CreatedBy
     @Column(updatable = false, name = "CREATED_BY")

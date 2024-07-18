@@ -32,7 +32,7 @@ public class Note extends UserDateStatusAudit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title", nullable = false, unique = true)
+    @Column(name = "title",  unique = true)
     private String title;
 
     @Column(name = "content")

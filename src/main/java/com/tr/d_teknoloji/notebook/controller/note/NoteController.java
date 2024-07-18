@@ -57,7 +57,6 @@ public class NoteController implements NoteAPI {
 
     @Override
     @PutMapping
-    @PreAuthorize("hasAuthority('NOTE_UPDATE') || hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
     public ResponseEntity<NoteDTO> updateNote(@Valid @RequestBody final NoteDTO dto) {
         log.debug("Updating note: {}", dto);
         return ResponseEntity.ok(noteService.save(dto));
@@ -65,7 +64,6 @@ public class NoteController implements NoteAPI {
 
     @Override
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('NOTE_DELETE') || hasAnyRole('ROLE_ADMIN', 'ROLE_SUPER_ADMIN')")
     public ResponseEntity<Void> deleteNote(@PathVariable final Long id) {
         log.debug("Deleting note with id: {}", id);
         noteService.delete(id);

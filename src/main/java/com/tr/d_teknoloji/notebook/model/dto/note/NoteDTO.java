@@ -22,11 +22,10 @@ public class NoteDTO extends BaseDateAuditDTO {
         return super.getId();
     }
 
-    @NotBlank(message = "Title is required")
     @Schema(description = "Note Title", example = "Meeting Notes")
     private String title;
 
-    @Schema(description = "Note Content", example = "Discussion about the new project...")
+    @Schema(description = "Note Content", example = "Content")
     private String content;
 
     @Schema(description = "Note Category")
