@@ -26,7 +26,6 @@ public class NoteDTO extends BaseDateAuditDTO {
     @Schema(description = "Note Title", example = "Meeting Notes")
     private String title;
 
-    @NotBlank(message = "Content is required")
     @Schema(description = "Note Content", example = "Discussion about the new project...")
     private String content;
 

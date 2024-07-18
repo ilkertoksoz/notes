@@ -4,12 +4,12 @@ spring:
     username: postgres
     password: password
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: 'true'
-    hibernate:
-      ddl-auto: update
+        format_sql: true
 
 server:
   port: 8080
@@ -17,9 +17,21 @@ server:
 logging:
   level:
     root: debug
-    org.hibernate.SQL: ERROR
-    org.hibernate.type.descriptor.sql.BasicBinder: ERROR
-    org.hibernate.type.descriptor.sql.BasicExtractor: ERROR
-    org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: ERROR
-    org.hibernate.loader.entity.plan: ERROR
-    org.hibernate.orm.sql.ast.tree: ERROR
+    org:
+      hibernate:
+        SQL: ERROR
+        type:
+          descriptor:
+            sql:
+              BasicBinder: ERROR
+              BasicExtractor: ERROR
+        engine:
+          internal:
+            StatisticalLoggingSessionEventListener: ERROR
+        loader:
+          entity:
+            plan: ERROR
+        orm:
+          sql:
+            ast:
+              tree: ERROR

@@ -35,7 +35,7 @@ public class Note extends UserDateStatusAudit {
     @Column(name = "title", nullable = false, unique = true)
     private String title;
 
-    @Column(name = "content", nullable = false)
+    @Column(name = "content")
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
